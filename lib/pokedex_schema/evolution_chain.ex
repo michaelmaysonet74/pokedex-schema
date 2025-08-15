@@ -8,8 +8,8 @@ defmodule PokedexSchema.EvolutionChain do
 
   @derive {Jason.Encoder, only: @json_fields}
   schema "evolution_chains" do
-    field :from, :map, source: :from_
-    field :to, {:array, :map}, default: nil
+    field :from, :map
+    field :to, {:array, :map}
 
     belongs_to :pokemon, Pokemon
   end
